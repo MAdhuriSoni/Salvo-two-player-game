@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:v-bind="http://www.w3.org/1999/xhtml" xmlns:v-on="http://www.w3.org/1999/xhtml">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Ship Locations!</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+<body background=" 920092-widescreen-water-background-images-2560x1600.jpg">
+<div id="main">
+<!--<div class="container">-->
+
+<div class="container">
+    <div class="enamyYou">
+    <p class="games" v-if="data.game ">{{sendUserNameForYou(data.game.gamePlayer)}} (you)
+    </p>
+
+    <p class="games" v-if="data.game ">{{sendUserNameForOpponent(data.game.gamePlayer)}} (Enemy)
+    </p>
+</div>
+</div>
+
+    <div class="container">
+        <div class="gridSetting">
+    <table class=="table-striped" id="shipGrid" class="grid">
+
+        <tbody>
+        <tr>
+            <th></th>
+            <th v-for="number in numbers">{{number}}</th>
+        </tr>
+        <tr v-for="letter in alphabet">
+            <th>{{letter}}</th>
+            <td v-for="number in numbers" v-on:click="shipCheckIsPlaced" v-bind:id="'player'+letter+number"></td>
+        </tr>
+        </tbody>
+    </table>
+
+
+    <!--<table v-show="salvo" id="salvoGrid" class="grid">    &lt;!&ndash;hide table &ndash;&gt;-->
+        <table class="table-striped" id="salvoGrid" class="grid">
+        <tbody>
+        <tr>
+            <th></th>
+            <th v-for="number in numbers">{{number}}</th>
+        </tr>
+        <tr v-for="letter in alphabet">
+            <th>{{letter}}</th>
+            <td v-for="number in numbers" v-on:click="salvosCheckIsPlaced(letter+number)" v-bind:id="'opponent'+letter+number"></td>      <!--salvosCheckIsPlaced(number,letter)  ('opponent'+letter+number)-->
+        </tr>
+        </tbody>
+    </table>
+        </div>
+
+    </div>
+    <div class="container buttons-container">
+        <div class="buttonsSetting">
+            <button v-on:click="afterRefreshPageSalvoSave()" class="btn btn-primary">SaveAllSalvos</button>
+            <button v-on:click="afterRefreshPageShipSave()" class="btn btn-primary">SaveAllShips</button>
+            <button><a href ="games.html" class="btn btn-primary">Score board</a></button>
+            <button @click="logout()" v-if="LoggedOut" id =logoutBtn class="button wide">Log out</button>
+            <select id = "slect_tag" class="btn btn-primary">
+                <option value="Horizontal">Horizontal</option>
+                <option value="Vartical">Vartical</option>
+            </select>
+        </div>
+    </div>
+
+
+    <div class="container">
+    <!--<h1>Ship Locations!</h1>-->
+    <div class="shipSetting">
+
+    <div id="ship1">
+            Destroyer:        <img id="destroyer" src="destroyer.png">
+        <input type="radio" name="radio" v-model="shipName" value="ship1" @click="shipSelectingData('Destroyer')">
+    </div>
+
+        <div id="ship2">
+        Submarine:        <img id="Submarine" src="container-ship-8JMDZW8-600.png">
+        <input type="radio" name="radio" v-model="shipName" value="ship2" @click="shipSelectingData('Submarine')">
+    </div>
+
+
+    <div id=ship3">
+        PatrolBoat:       <img id="PatrolBoat" src="destro2.png">
+        <input type="radio" name="radio" v-model="shipName" value="ship3" @click="shipSelectingData('PatrolBoat')">
+        </div>
+
+    <div id="ship4">
+    Fishingboat:        <img id="Fishingboat" src="1-131231194Z3396.png">
+        <input type="radio" name="radio" v-model="shipName" value="ship4"  @click="shipSelectingData('Fishingboat')">
+    </div>
+
+
+    <div id="ship5">
+        Speedboat:      <img id="Speedboat" src="aircraft2.png">
+        <input type="radio" name="radio" v-model="shipName" value="ship5"  @click="shipSelectingData('Speedboat')">
+          </div>
+
+</div>
+</div>
+
+
+</div>
+
+<script src="https://code.jquery.com/jquery-2.2.0.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+<script src="game.js"></script>
+</body>
+</html>

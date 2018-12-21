@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.0.js"></script>
+
+</head>
+<body>
+
+
+    <div id="main">
+
+<div  v-if="currentPlayer">
+<div  v-for="(player, index) in games">
+<p>{{player.created}}</p>
+<p>{{player.id}}</p>
+<p v-for = "gamePlayer in games[index].gamePlayer">{{gamePlayer.player.player}}</p>
+</div>
+</div>
+    </div>
+<script src="Gamess.js"></script>
+</body>
+</html>

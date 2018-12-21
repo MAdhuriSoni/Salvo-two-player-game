@@ -1,0 +1,176 @@
+table
+{
+    border-collapse: collapse;
+}
+
+table td
+{
+    padding:15px;
+    border:1px solid black;
+}
+
+.change_cell_color
+{
+    background-color: red;
+}
+.change_salvo_color
+{
+    background-color: crimson;
+}
+.salvo_Shoot_Hit
+{
+    background-color: darkgoldenrod;
+
+}
+.Salvo_Shoot_miss
+{
+    background-color: blue;
+}
+salvo_Shoot_Hit_player
+{
+  background-color: orange;
+}
+.Salvo_Shoot_miss_player
+ {
+   background-color:blue;
+ }
+ .Salvo_Hit_enemy
+  {
+   background-color: darkgoldenrod;
+  }
+#tableSetting
+{
+display:flex;
+flex-direction:row;
+justify-content: space-evenly;
+margin-left:400px;
+padding-right: 200px;
+margin-top: 1px;
+}
+
+.gridSetting
+ {
+    display:flex;
+    flex-direction:row;
+    justify-content: space-evenly;
+ }
+.change_sink_color
+  {
+   background-color:orange;
+  }
+
+.hits_on_opponent
+  {
+    background-color: blue;
+  }
+.placingShipColor
+{
+background-color: blueviolet;
+}
+#destroyer, #Submarine, #PatrolBoat, #Fishingboat, #Speedboat
+{
+  width:100px;
+}
+.shipSetting
+{
+
+margin-left: 560px;
+margin-right:560px;
+    border: solid 1px black;
+    text-align: center;
+}
+.enamyYou
+  {
+display:flex;
+flex-direction:row;
+justify-content: space-evenly;
+  }
+.firstGameShipColor
+{
+background-color:green;
+}
+
+.change_salvo_color
+{
+  background-color : green;
+}
+#uPInputs
+  {
+    display:inline;
+    margin-left: 240px;
+  }
+
+#setting2
+{     margin-top: 10px;
+      margin-left: 75px;
+}
+ #signup
+ {
+   margin-top: 5px;
+   margin-left:700px;
+ }
+#returnGameSignUp
+ {
+      display: flex;
+      flex-direction: row;
+      margin-top: 10px;
+      margin-bottom: 20px;
+
+ }
+ .save_ship_grid
+  {
+   background-color: red;
+  }
+  #games
+  {
+    margin-left:300px;
+  }
+
+  .User_Sunk_Ship
+  {
+  background-color: gray;
+  }
+   .opponent_sunk_ship
+    {
+     background-color: orange;
+    }
+#logout
+{
+     margin-left: 800px;
+     margin-top: -100px;
+}
+.buttonsSetting
+{
+    margin-top:-100px;
+    display:flex;
+    justify-content: space-evenly;
+    flex-direction:column;
+    margin-right:1200px;
+  }
+#scores
+{
+  background-color: rgba(0,0,0, 0.5);
+      color: white;
+      width: 600px;
+      height: 370px;
+      text-align: center;
+      margin: 100px auto 100px;
+      padding: 20px;
+      padding-left: 0px;
+      border-radius: 15px;
+      }
+
+#login
+{
+          color: white;
+          background-color: #336699;
+          border: 1px solid white;
+          border-radius: 10px;
+          width: 100px;
+          height: 28px;
+          font-size: 16px;
+      }
+
+.buttons-container {
+position : absolute;
+}
